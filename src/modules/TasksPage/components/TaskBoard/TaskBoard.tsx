@@ -34,8 +34,8 @@ export const TaskBoard: React.FC<Props> = ({ project, filterBy, sortBy }) => {
     }
 
     const [projectIdStr, taskIdStr] = draggableId.split("-");
-    const projectId = projectIdStr;
-    const taskId = taskIdStr;
+    const projectId = +projectIdStr;
+    const taskId = +taskIdStr;
 
     const project = useProjectStore
       .getState()
@@ -47,9 +47,7 @@ export const TaskBoard: React.FC<Props> = ({ project, filterBy, sortBy }) => {
     }
 
     const updatedTasks = [...project.tasks];
-    const draggedTaskIndex = updatedTasks.findIndex(
-      (t) => `${t.id}` === taskId
-    );
+    const draggedTaskIndex = updatedTasks.findIndex((t) => t.id === taskId);
     const draggedTask = updatedTasks[draggedTaskIndex];
     if (!draggedTask) return;
 
