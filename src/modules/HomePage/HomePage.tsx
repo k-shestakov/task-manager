@@ -7,7 +7,7 @@ export const HomePage: React.FC = () => {
   const { user } = useAuthStore();
 
   if (!user) {
-    <Navigate to="/login" />;
+    return <Navigate to="/login" />;
   }
 
   return (
