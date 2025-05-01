@@ -1,14 +1,20 @@
 import React from "react";
+import { Navigate } from "react-router-dom";
 import { useAuthStore } from "../../stores/authStore";
 import { UserInfo } from "./components/UserInfo";
-import { Login } from "./components/Login";
 
 export const HomePage: React.FC = () => {
   const { user } = useAuthStore();
 
+  if (!user) {
+    <Navigate to="/login" />;
+  }
+
   return (
     <section className="container mx-auto px-4">
-      <div className="">{user ? <UserInfo /> : <Login />}</div>
+      <div className="">
+        <UserInfo />
+      </div>
     </section>
   );
 };

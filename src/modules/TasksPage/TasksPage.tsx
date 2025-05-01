@@ -32,7 +32,7 @@ export const TasksPage: React.FC = () => {
         {!loading && error && <div className="message">{error}</div>}
         {!loading && !error && !projects.length && (
           <div className="message">
-            <p>You have no projects</p>
+            <p className="dark:text-gray-200">You have no projects</p>
             <GoCreate />
           </div>
         )}
