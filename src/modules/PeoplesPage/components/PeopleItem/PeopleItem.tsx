@@ -6,7 +6,6 @@ import { toast } from "react-toastify";
 import { People } from "../../../../types/People";
 import { usePeopleStore } from "../../../../stores/peoplesStore";
 import { ID } from "../../../../types/ID";
-import { useAuthStore } from "../../../../stores/authStore";
 import { Roles } from "../../../../types/Roles";
 
 type Props = {
@@ -16,7 +15,6 @@ type Props = {
 export const PeopleItem: React.FC<Props> = ({ people }) => {
   const { id, firstName, lastName, role, login, password } = people;
   const { deleteUser } = usePeopleStore();
-  const { user } = useAuthStore();
   const { peopleId } = useParams();
 
   const deletePeople = (id: ID) => {
@@ -59,7 +57,7 @@ export const PeopleItem: React.FC<Props> = ({ people }) => {
       <td className="px-4 py-3">{login}</td>
       <td className="px-4 py-3">{password}</td>
 
-      {user?.role !== Roles.Admin && (
+      {people?.role !== Roles.Admin && (
         <td className="px-4 py-3 flex items-center justify-end">
           <button
             id={`${id}-dropdown-button`}
