@@ -1,5 +1,4 @@
 import React from "react";
-// import "./TablePeoples.scss";
 import { PeopleItem } from "../PeopleItem";
 import { People } from "../../../../types/People";
 
