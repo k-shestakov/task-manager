@@ -1801,6 +1801,158 @@
       ],
       "date": "2025-04-29",
       "dateEnd": "2025-05-30"
+    },
+    {
+      "id": "c383",
+      "title": "project1",
+      "description": "some desc",
+      "status": "Completed",
+      "peoples": [
+        {
+          "id": "b9bf",
+          "firstName": "Kostiantyn",
+          "lastName": "Shestakov",
+          "login": "kostia",
+          "password": "strong_pass",
+          "role": "Admin",
+          "projects": [],
+          "task": []
+        },
+        {
+          "id": "bc39",
+          "firstName": "Anastasia",
+          "lastName": "Gontar",
+          "login": "anastas_gon",
+          "password": "anas9009",
+          "role": "Project Manager",
+          "projects": [],
+          "task": []
+        },
+        {
+          "id": "ca02",
+          "firstName": "Bogdan",
+          "lastName": "Contimitskiy",
+          "login": "bog_99",
+          "password": "09893",
+          "role": "Project Manager",
+          "projects": [],
+          "task": []
+        }
+      ],
+      "tasks": [
+        {
+          "id": 2,
+          "description": "some desc",
+          "title": "task2",
+          "status": "Done",
+          "date": "05/01/2025",
+          "deadline": "1 day",
+          "peoples": [
+            {
+              "id": "b9bf",
+              "firstName": "Kostiantyn",
+              "lastName": "Shestakov",
+              "login": "kostia",
+              "password": "strong_pass",
+              "role": "Admin",
+              "projects": [],
+              "task": []
+            },
+            {
+              "id": "bc39",
+              "firstName": "Anastasia",
+              "lastName": "Gontar",
+              "login": "anastas_gon",
+              "password": "anas9009",
+              "role": "Project Manager",
+              "projects": [],
+              "task": []
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "description": "sdf",
+          "title": "task3",
+          "status": "Done",
+          "date": "05/01/2025",
+          "deadline": "1 week",
+          "peoples": [
+            {
+              "id": "b9bf",
+              "firstName": "Kostiantyn",
+              "lastName": "Shestakov",
+              "login": "kostia",
+              "password": "strong_pass",
+              "role": "Admin",
+              "projects": [],
+              "task": []
+            },
+            {
+              "id": "bc39",
+              "firstName": "Anastasia",
+              "lastName": "Gontar",
+              "login": "anastas_gon",
+              "password": "anas9009",
+              "role": "Project Manager",
+              "projects": [],
+              "task": []
+            },
+            {
+              "id": "ca02",
+              "firstName": "Bogdan",
+              "lastName": "Contimitskiy",
+              "login": "bog_99",
+              "password": "09893",
+              "role": "Project Manager",
+              "projects": [],
+              "task": []
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "description": "some desc",
+          "title": "task1",
+          "status": "In Progress",
+          "date": "05/01/2025",
+          "deadline": "1 day",
+          "peoples": [
+            {
+              "id": "b9bf",
+              "firstName": "Kostiantyn",
+              "lastName": "Shestakov",
+              "login": "kostia",
+              "password": "strong_pass",
+              "role": "Admin",
+              "projects": [],
+              "task": []
+            },
+            {
+              "id": "bc39",
+              "firstName": "Anastasia",
+              "lastName": "Gontar",
+              "login": "anastas_gon",
+              "password": "anas9009",
+              "role": "Project Manager",
+              "projects": [],
+              "task": []
+            },
+            {
+              "id": "ca02",
+              "firstName": "Bogdan",
+              "lastName": "Contimitskiy",
+              "login": "bog_99",
+              "password": "09893",
+              "role": "Project Manager",
+              "projects": [],
+              "task": []
+            }
+          ]
+        }
+      ],
+      "date": "2025-05-01",
+      "dateEnd": "2025-06-07"
     }
   ],
   "peoples": [

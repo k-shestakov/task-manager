@@ -3,7 +3,8 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import { PeopleState } from "../types/storeTypes/PeopleState";
 
-const API_URL = "http://localhost:5000/peoples";
+const API_URL =
+  "https://task-manager-api-production-c252.up.railway.app/peoples";
 
 export const usePeopleStore = create<PeopleState>((set) => ({
   users: [],
