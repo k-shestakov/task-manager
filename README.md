@@ -19,8 +19,8 @@ A Kanban-style project management web application with authentication and role-b
 
 ## 🧪 How to Run the Project Locally
 
-### 1. Clone the Repository
-
+- Fork the repository
+- Clone the forked repo
 ```bash
 git clone https://github.com/k-shestakov/task-manager.git
 cd task-manager
