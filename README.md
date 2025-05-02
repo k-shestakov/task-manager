@@ -84,6 +84,35 @@ src/
 
 ## 🗃️ Database Structure
 
+```js
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Projec1",
+      "description": "Some desc",
+      "status": "Planned",
+      "peoples": [],
+      "tasks": [],
+      "date": "2025-04-28",
+      "dateEnd": "2025-04-30"
+    },
+  ],
+  "peoples": [
+    {
+      "id": 0,
+      "firstName": "admin",
+      "lastName": "admin",
+      "login": "admin",
+      "password": "admin",
+      "role": "Admin",
+      "projects": [],
+      "task": []
+    },
+  ]
+}
+```
+
 ### `Project` Interface
 
 ```ts
