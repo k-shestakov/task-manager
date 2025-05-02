@@ -1,12 +1,12 @@
-# 🚀 Task Manager
+# Task Manager
 
 A Kanban-style project management web application with authentication and role-based access.
 
-## 🌐 Live Demo
+## Live Demo
 
-👉 [Task Manager](https://k-shestakov.github.io/task-manager)
+[Task Manager](https://k-shestakov.github.io/task-manager)
 
-## 📦 Technologies Used
+## Technologies Used
 
 - **Build Tool**: Create React App (CRA)
 - **Frontend**: React, TypeScript, Tailwind CSS, SCSS, Flowbite
@@ -17,7 +17,7 @@ A Kanban-style project management web application with authentication and role-b
 - **Backend**: json-server (hosted on [Railway](https://github.com/k-shestakov/task-manager-api))
 - **Version Control**: Git, GitHub
 
-## 🧪 How to Run the Project Locally
+## How to Run the Project Locally
 
 - Fork the repository
 - Clone the forked repo
@@ -30,7 +30,7 @@ npm start
 
 ### Node.js Version: Make sure you're using Node.js v20.17.0 to ensure compatibility.
 
-## 📁 Project Structure
+## Project Structure
 
 ```bash
 src/
@@ -45,7 +45,7 @@ src/
 └── index.tsx       # Entry point
 ```
 
-## 🔐 Test User Accounts
+## Test User Accounts
 
 | Role            | Login | Password |
 |-----------------|-------|----------|
@@ -53,36 +53,36 @@ src/
 | Project Manager | pm    | pm       |
 | Team Member     | tm    | tm       |
 
-## 📄 Pages Overview
+## Pages Overview
 
-### 🔑 LoginPage
+### LoginPage
 - Log in with an existing account
 - Register a new user
 
-### 🏠 HomePage
+### HomePage
 - Displays information about the currently logged-in user
 
-### 📁 ProjectsPage
+### ProjectsPage
 - View list of all projects
 - CRUD operations available to Admin and Project Manager
 
-### 📋 TasksPage
+### TasksPage
 - Kanban board for each project
 - Drag-and-drop supported for task statuses
 
-### 📝 TaskDetailsPage
+### TaskDetailsPage
 - Full details of a selected task
 - CRUD operations available to Admin and Project Manager
 
-### 👥 PeoplesPage
+### PeoplesPage
 - List of all registered users
 - Only accessible by Admin
 - Full CRUD support
 
-### ❌ NotFoundPage
+### NotFoundPage
 - Displays 404 error for unknown routes
 
-## 🗃️ Database Structure
+## Database Structure
 
 ```js
 {
@@ -143,10 +143,10 @@ export interface People {
 }
 ```
 
-## 🌍 Deployment
+## Deployment
 
 - **Frontend** deployed via GitHub Pages:  
-  👉 [Task Manager](https://k-shestakov.github.io/task-manager)
+  [Task Manager](https://k-shestakov.github.io/task-manager)
 
 - **Backend API** hosted on Railway:  
-  👉 [task-manager-api](https://github.com/k-shestakov/task-manager-api)
+  [task-manager-api](https://github.com/k-shestakov/task-manager-api)
