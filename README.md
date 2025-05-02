@@ -24,3 +24,94 @@ A Kanban-style project management web application with authentication and role-b
 ```bash
 git clone https://github.com/k-shestakov/task-manager.git
 cd task-manager
+npm install
+npm start
+
+### ✅ Node.js Version: Make sure you're using Node.js v20.17.0 to ensure compatibility.
+
+## 📁 Project Structure
+
+src/
+├── modules/        # All components and pages
+├── services/       # Helper functions and API logic
+├── stores/         # Global Zustand store
+├── styles/         # SCSS styles
+├── types/          # TypeScript types and interfaces
+├── App.tsx         # Root component
+├── App.scss        # Global styles & Tailwind config
+├── Root.tsx        # Routing configuration
+└── index.tsx       # Entry point
+
+## 🔐 Test User Accounts
+
+| Role            | Login | Password |
+|-----------------|-------|----------|
+| Admin           | admin | admin    |
+| Project Manager | pm    | pm       |
+| Team Member     | tm    | tm       |
+
+## 📄 Pages Overview
+
+### 🔑 LoginPage
+- Log in with an existing account
+- Register a new user
+
+### 🏠 HomePage
+- Displays information about the currently logged-in user
+
+### 📁 ProjectsPage
+- View list of all projects
+- CRUD operations available to Admin and Project Manager
+
+### 📋 TasksPage
+- Kanban board for each project
+- Drag-and-drop supported for task statuses
+
+### 📝 TaskDetailsPage
+- Full details of a selected task
+- CRUD operations available to Admin and Project Manager
+
+### 👥 PeoplesPage
+- List of all registered users
+- Only accessible by Admin
+- Full CRUD support
+
+### ❌ NotFoundPage
+- Displays 404 error for unknown routes
+
+
+## 🗃️ Database Structure
+
+### `Project` Interface
+
+```ts
+export interface Project {
+  id: ID;
+  title: string;
+  description: string;
+  peoples: People[];
+  tasks: Task[];
+  date: string;
+  dateEnd: string;
+  status: Statuses;
+}
+
+```ts
+export interface People {
+  id: ID;
+  firstName: string;
+  lastName: string;
+  role: Roles;
+  login: string;
+  password: string;
+  projects: Project[];
+  task?: Task[];
+}
+
+## 🌍 Deployment
+
+- **Frontend** deployed via GitHub Pages:  
+  👉 [Task Manager](https://k-shestakov.github.io/task-manager)
+
+- **Backend API** hosted on Railway:  
+  👉 [task-manager-api](https://github.com/k-shestakov/task-manager-api)
