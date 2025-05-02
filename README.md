@@ -28,10 +28,11 @@ npm install
 npm start
 ```
 
-### ✅ Node.js Version: Make sure you're using Node.js v20.17.0 to ensure compatibility.
+### Node.js Version: Make sure you're using Node.js v20.17.0 to ensure compatibility.
 
 ## 📁 Project Structure
 
+```bash
 src/
 ├── modules/        # All components and pages
 ├── services/       # Helper functions and API logic
@@ -42,6 +43,7 @@ src/
 ├── App.scss        # Global styles & Tailwind config
 ├── Root.tsx        # Routing configuration
 └── index.tsx       # Entry point
+```
 
 ## 🔐 Test User Accounts
 
@@ -80,7 +82,6 @@ src/
 ### ❌ NotFoundPage
 - Displays 404 error for unknown routes
 
-
 ## 🗃️ Database Structure
 
 ### `Project` Interface
@@ -96,6 +97,9 @@ export interface Project {
   dateEnd: string;
   status: Statuses;
 }
+```
+
+### `People` Interface
 
 ```ts
 export interface People {
@@ -108,6 +112,7 @@ export interface People {
   projects: Project[];
   task?: Task[];
 }
+```
 
 ## 🌍 Deployment
 
