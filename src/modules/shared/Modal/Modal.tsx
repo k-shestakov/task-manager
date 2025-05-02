@@ -9,6 +9,7 @@ import { Task } from "../../../types/Task";
 import { Project } from "../../../types/Project";
 import { useProjectStore } from "../../../stores/projectsStore";
 import { ID } from "../../../types/ID";
+import { Spinner } from "../Spinner";
 
 type Props = {
   modalIsOpen: boolean;
@@ -31,7 +32,7 @@ export const Modal: React.FC<Props> = ({
   updateDatas,
   project,
 }) => {
-  const { deleteProject, deleteTaskFromProject } = useProjectStore();
+  const { deleteProject, deleteTaskFromProject, loading } = useProjectStore();
   const navigate = useNavigate();
 
   const handleDeleteProject = (id: ID) => {
@@ -121,20 +122,22 @@ export const Modal: React.FC<Props> = ({
             <div className="flex">
               {type === "delete" && formType === FormTypes.Project && (
                 <button
-                  className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                  disabled={loading}
+                  className="w-full flex justify-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                   onClick={() => handleDeleteProject(datas.id)}
                 >
-                  Delete
+                  {loading ? <Spinner /> : "Delete"}
                 </button>
               )}
 
               {type === "delete" && formType === FormTypes.Task && (
                 <button
+                  disabled={loading}
                   onClick={handleDeleteTask}
                   type="button"
-                  className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                  className="w-full flex justify-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                 >
-                  Delete
+                  {loading ? <Spinner /> : "Delete"}
                 </button>
               )}
 

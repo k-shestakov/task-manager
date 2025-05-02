@@ -7,6 +7,7 @@ import { usePeopleStore } from "../../../../../stores/peoplesStore";
 import { useProjectStore } from "../../../../../stores/projectsStore";
 import { People } from "../../../../../types/People";
 import { TaskStatuses } from "../../../../../types/TaskStatuses";
+import { Spinner } from "../../../Spinner";
 
 type Props = {
   projectEdit: Project;
@@ -264,9 +265,10 @@ export const EditProject: React.FC<Props> = ({ projectEdit, onModalOpen }) => {
 
       <button
         type="submit"
-        className="mt-6 w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+        disabled={loading}
+        className="mt-6 w-full flex justify-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
       >
-        Edit
+        {loading ? <Spinner /> : "Edit"}
       </button>
     </form>
   );

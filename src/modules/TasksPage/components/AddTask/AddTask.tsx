@@ -6,6 +6,7 @@ import { Task } from "../../../../types/Task";
 import { Deadlines } from "../../../../types/Deadlines";
 import { ID } from "../../../../types/ID";
 import { useProjectStore } from "../../../../stores/projectsStore";
+import { Spinner } from "../../../shared/Spinner";
 
 type Props = {
   modalIsOpen: boolean;
@@ -27,7 +28,7 @@ export const AddTask: React.FC<Props> = ({
     peoples: [] as ID[],
   });
 
-  const { addTaskToProject } = useProjectStore();
+  const { addTaskToProject, loading } = useProjectStore();
 
   const getTaskId = (tasks: Task[]) => {
     if (!tasks.length) {
@@ -245,10 +246,11 @@ export const AddTask: React.FC<Props> = ({
 
               <div className="flex items-center space-x-4">
                 <button
+                  disabled={loading}
                   type="submit"
-                  className="w-full text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                  className="w-full flex justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                 >
-                  Add Task
+                  {loading ? <Spinner /> : "Add Task"}
                 </button>
 
                 <button

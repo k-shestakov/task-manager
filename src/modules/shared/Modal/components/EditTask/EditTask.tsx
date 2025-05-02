@@ -5,6 +5,7 @@ import { Deadlines } from "../../../../../types/Deadlines";
 import { TaskStatuses } from "../../../../../types/TaskStatuses";
 import { Project } from "../../../../../types/Project";
 import { useProjectStore } from "../../../../../stores/projectsStore";
+import { Spinner } from "../../../Spinner";
 
 type Props = {
   taskEdit: Task;
@@ -25,7 +26,7 @@ export const EditTask: React.FC<Props> = ({
     deadline: taskEdit.deadline,
     status: taskEdit.status,
   });
-  const { updateTaskInProject } = useProjectStore();
+  const { updateTaskInProject, loading } = useProjectStore();
 
   const [peopleIdsOnTask, setPeopleIdsOnTask] = useState(
     taskEdit.peoples.map((p) => p.id)
@@ -201,10 +202,11 @@ export const EditTask: React.FC<Props> = ({
       </div>
 
       <button
+        disabled={loading}
         type="submit"
-        className="mt-6 w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+        className="mt-6 flex justify-center w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
       >
-        Edit
+        {loading ? <Spinner /> : "Edit"}
       </button>
     </form>
   );
