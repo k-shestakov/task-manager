@@ -26,6 +26,7 @@ git clone https://github.com/k-shestakov/task-manager.git
 cd task-manager
 npm install
 npm start
+```
 
 ### ✅ Node.js Version: Make sure you're using Node.js v20.17.0 to ensure compatibility.
 
