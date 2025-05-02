@@ -2,13 +2,9 @@
 
 A Kanban-style project management web application with authentication and role-based access.
 
----
-
 ## 🌐 Live Demo
 
 👉 [Task Manager](https://k-shestakov.github.io/task-manager)
-
----
 
 ## 📦 Technologies Used
 
@@ -20,8 +16,6 @@ A Kanban-style project management web application with authentication and role-b
 - **Notifications**: react-toastify
 - **Backend**: json-server (hosted on [Railway](https://github.com/k-shestakov/task-manager-api))
 - **Version Control**: Git, GitHub
-
----
 
 ## 🧪 How to Run the Project Locally
 
