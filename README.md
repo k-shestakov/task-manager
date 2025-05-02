@@ -35,7 +35,7 @@ npm start
 ```bash
 src/
 ├── modules/        # All components and pages
-├── services/       # Helper functions and API logic
+├── services/       # Helper functions
 ├── stores/         # Global Zustand store
 ├── styles/         # SCSS styles
 ├── types/          # TypeScript types and interfaces
